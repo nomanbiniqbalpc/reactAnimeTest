@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap');
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+body{
+    background: #000;
+    color: #fff;
+    overflow: hidden;
+    height: 100vh;
+}
+a,
+a:visited,
+a:hover,
+a:active {
+    color: inherit;
+    text-decoration: none;
+}
+h1{
+    text-align: center;
+    font-size: 48px;
+    font-weight: 300;
+    margin-top: 80px;
+}
+.home .toggle-btn {
+    font-size: 28px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #9b9b9b;
+    position: absolute;
+    top: 80%;
+    right: 40px;
+    z-index: 12;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor:pointer;
+    visibility: visible;
+    transition: background 0.3s ease-in-out;
+}
+.home .toggle-btn.close{
+    top: 40px;
+    background: #fff;
+}
+.home .toggle-btn.open{
+    top: 80%;
+    transition: 1s cubic-bezier(0.59, 0.42, 0.28, 0.95);
+}
+.home .toggle-btn .box{
+    width: 10px;
+    height: 10px;
+    background: #9b9b9b;
+    visibility: hidden;
+}
+.home .toggle-btn .box,.home .toggle-btn .cross{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -44%);
+}
+.home .toggle-btn .box{
+    transform: translate(-50%, -50%)
+}
+.home .toggle-btn.open .box, .home .toggle-btn.close .cross{
+    visibility: visible;
+}
+.home .toggle-btn .cross {
+    visibility: hidden;
+    color: #9b9b9b;
+}
+
